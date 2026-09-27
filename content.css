@@ -1,0 +1,72 @@
+.lt-original-collapsed {
+  display: none !important;
+}
+
+.lt-translation-wrap {
+  margin-top: 4px;
+  font: inherit;
+  color: inherit;
+  white-space: normal;
+  min-width: 0;
+}
+
+.lt-translated-text {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font: inherit;
+  color: inherit;
+  line-height: inherit;
+}
+
+.lt-translation-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 5px;
+  min-height: 16px;
+}
+
+.lt-badge {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 9px;
+  line-height: 13px;
+  letter-spacing: .06em;
+  opacity: .42;
+  user-select: none;
+}
+
+.lt-original-toggle {
+  appearance: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  color: rgb(29, 155, 240);
+  font: inherit;
+  font-size: 12px;
+  line-height: 16px;
+  cursor: pointer;
+}
+
+.lt-original-toggle:hover { text-decoration: underline; }
+
+.lt-dual-mode {
+  margin-top: 6px;
+  padding-top: 6px;
+  border-top: 1px solid rgba(127, 127, 127, .20);
+}
+
+.lt-preserved-link {
+  color: rgb(29, 155, 240);
+  text-decoration: none;
+  cursor: pointer;
+  overflow-wrap: anywhere;
+}
+
+.lt-preserved-link:hover {
+  text-decoration: underline;
+}
+
+.lt-preserved-links-fallback {
+  display: inline;
+}

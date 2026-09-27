@@ -1,0 +1,129 @@
+:root {
+  color-scheme: light dark;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  width: 340px;
+  background: Canvas;
+  color: CanvasText;
+}
+
+main { padding: 16px; }
+
+.head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid color-mix(in srgb, CanvasText 16%, transparent);
+}
+
+.mark {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  background: CanvasText;
+  color: Canvas;
+  font: 700 12px/1 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  letter-spacing: -.02em;
+}
+
+h1 { margin: 0; font-size: 16px; line-height: 20px; }
+p { margin: 2px 0 0; }
+.head p { font-size: 12px; opacity: .62; }
+
+.row,
+.field {
+  display: flex;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.row { justify-content: space-between; align-items: center; }
+.row strong, .field > span { font-size: 13px; }
+.row small { display: block; margin-top: 2px; max-width: 236px; font-size: 11px; line-height: 15px; opacity: .58; }
+.compact { margin-top: 12px; }
+
+input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #1d9bf0;
+}
+
+.field { flex-direction: column; gap: 6px; }
+select {
+  width: 100%;
+  padding: 9px 10px;
+  border: 1px solid color-mix(in srgb, CanvasText 22%, transparent);
+  background: Canvas;
+  color: CanvasText;
+  font: inherit;
+  font-size: 13px;
+}
+
+.primary {
+  width: 100%;
+  margin-top: 16px;
+  padding: 10px 12px;
+  border: 0;
+  background: #1d9bf0;
+  color: #fff;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.primary:disabled { opacity: .6; cursor: default; }
+
+.status {
+  min-height: 18px;
+  margin-top: 10px;
+  font-size: 11px;
+  line-height: 16px;
+  opacity: .68;
+}
+
+.foot {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid color-mix(in srgb, CanvasText 14%, transparent);
+  font-size: 10px;
+  line-height: 14px;
+  opacity: .48;
+}
+
+.secondary {
+  width: 100%;
+  margin-top: 10px;
+  padding: 9px 12px;
+  border: 1px solid rgba(127,127,127,.28);
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.secondary:disabled { opacity: .5; cursor: default; }
+
+.site-section {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid color-mix(in srgb, CanvasText 16%, transparent);
+}
+
+.site-section h2 { margin: 0; font-size: 13px; }
+.current-host { margin-top: 4px; font-size: 12px; overflow-wrap: anywhere; opacity: .72; }
+.site-section .secondary { margin-top: 8px; }
+.ignored-sites { margin-top: 10px; }
+.ignored-sites summary { cursor: pointer; font-size: 12px; }
+.ignored-sites ul { list-style: none; padding: 0; margin: 7px 0 0; max-height: 120px; overflow: auto; }
+.ignored-sites li { display: flex; align-items: center; gap: 6px; padding: 4px 0; font-size: 12px; }
+.ignored-sites li span { flex: 1; min-width: 0; overflow-wrap: anywhere; }
+.ignored-sites li button { border: 0; padding: 3px; background: none; color: #1d9bf0; font: inherit; cursor: pointer; }

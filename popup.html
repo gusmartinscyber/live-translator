@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Live Translator</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main>
+    <div class="head">
+      <div class="mark">A→PT</div>
+      <div>
+        <h1>Live Translator</h1>
+        <p>Tradução contínua enquanto você rola.</p>
+      </div>
+    </div>
+
+    <label class="row switch-row">
+      <span>
+        <strong>Automático</strong>
+        <small>Conteúdo novo é traduzido sem clicar.</small>
+      </span>
+      <input id="enabled" type="checkbox">
+    </label>
+
+    <label class="field">
+      <span>Sites</span>
+      <select id="scope">
+        <option value="all">Todos os sites</option>
+        <option value="social">Só redes sociais</option>
+      </select>
+    </label>
+
+    <section class="site-section" aria-labelledby="site-heading">
+      <h2 id="site-heading">Este site</h2>
+      <p id="currentHost" class="current-host">Verificando…</p>
+      <button id="toggleSite" class="secondary" type="button" disabled>Ignorar este site</button>
+      <div id="ignoredSites" class="ignored-sites"></div>
+    </section>
+
+    <label class="field">
+      <span>Motor</span>
+      <select id="provider">
+        <option value="auto">Automático — local quando pronto + Google</option>
+        <option value="google">Google</option>
+        <option value="chrome">Chrome local</option>
+      </select>
+    </label>
+
+    <label class="field">
+      <span>Exibição</span>
+      <select id="displayMode">
+        <option value="translated-only">Só português</option>
+        <option value="dual">Original + português</option>
+      </select>
+    </label>
+
+    <label class="row switch-row compact">
+      <span>
+        <strong>Outros idiomas</strong>
+        <small>Traduz também espanhol, francês, japonês etc.</small>
+      </span>
+      <input id="translateNonEnglish" type="checkbox">
+    </label>
+
+    <div id="status" class="status">Verificando…</div>
+    <button id="rescan" class="secondary" type="button">Reprocessar página</button>
+    <p class="foot">No modo Automático/Google, o texto traduzido é enviado ao serviço de tradução do Google. Campos de formulário, código e áreas editáveis são ignorados.</p>
+  </main>
+  <script src="site-rules.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
